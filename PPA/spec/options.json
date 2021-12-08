@@ -1,0 +1,359 @@
+{
+    "PCA": {
+        "availability": {
+            "always": true,
+            "cases": []
+        },
+        "single_x": {
+            "always": false,
+            "cases": [
+                {
+                    "data": "time",
+                    "analysis": "regression"
+                }
+            ]
+        },
+        "single_y": {
+            "always": false,
+            "cases": []
+        },
+        "hyperparameters": [
+            {
+                "name": "Number of components",
+                "internal_name": "nr_comp",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            }
+        ],
+        "python_module": {
+            "name": "pls",
+            "function": "perform_pls"
+        }
+    },
+    
+    "PLS": {
+        "availability": {
+            "always": true,
+            "cases": []
+        },
+        "single_x": {
+            "always": false,
+            "cases": [
+                {
+                    "data": "time",
+                    "analysis": "regression"
+                }
+            ]
+        },
+        "single_y": {
+            "always": false,
+            "cases": []
+        },
+        "hyperparameters": [
+            {
+                "name": "Number of components",
+                "internal_name": "n_components",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            }
+        ],
+        "python_module": {
+            "name": "pls",
+            "function": "run"
+        }
+    },
+    
+    "XGBoost": {
+        "availability": {
+            "always": true,
+            "cases": []
+        },
+        "single_x": {
+            "always": false,
+            "cases": []
+        },
+        "single_y": {
+            "always": false,
+            "cases": []
+        },
+        "hyperparameters": [
+            {
+                "name": "Number of estimators",
+                "internal_name": "n_est",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        1,
+                        10,
+                        20,
+                        50,
+                        60
+                    ]
+                }
+            },
+            {
+                "name": "Max depth",
+                "internal_name": "max_depth",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            },
+            {
+                "name": "Learning Rate",
+                "internal_name": "learning_rate",
+                "type": "float",
+                "default": {
+                    "type": "single",
+                    "value": 0.05
+                }
+            },
+            {
+                "name": "Min child weight",
+                "internal_name": "min_child_weight",
+                "type": "float",
+                "default": {
+                    "type": "single",
+                    "value": 0.05
+                }
+            },
+            {
+                "name": "Colsample bytree",
+                "internal_name": "colsample_bytree",
+                "type": "float",
+                "default": {
+                    "type": "single",
+                    "value": 0.05
+                }
+            },
+            {
+                "name": "Subsample",
+                "internal_name": "subsample",
+                "type": "float",
+                "default": {
+                    "type": "single",
+                    "value": 0.05
+                }
+            }
+        ],
+        "python_module": {
+            "name": "xgboost",
+            "function": "perform_xgboost"
+        }
+    },
+    
+    "Random Forest": {
+        "availability": {
+            "always": true,
+            "cases": []
+        },
+        "single_x": {
+            "always": false,
+            "cases": []
+        },
+        "single_y": {
+            "always": false,
+            "cases": []
+        },
+        "hyperparameters": [
+            {
+                "name": "Number of estimators",
+                "internal_name": "n_estimators",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        1,
+                        10,
+                        20,
+                        50,
+                        60
+                    ]
+                }
+            },
+            {
+                "name": "Max depth",
+                "internal_name": "max_depth",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            },
+            {
+                "name": "Random State",
+                "internal_name": "random_state",
+                "type": "int",
+                "default": {
+                    "type": "single",
+                    "value": 42
+                }
+            }
+        ],
+        "python_module": {
+            "name": "rf",
+            "function": "run"
+        }
+    },
+    
+    "Support Vector Machines": {
+        "availability": {
+            "always": true,
+            "cases": []
+        },
+        "single_x": {
+            "always": false,
+            "cases": []
+        },
+        "single_y": {
+            "always": false,
+            "cases": []
+        },
+        "hyperparameters": [
+            {
+                "name": "Kernel function",
+                "internal_name": "kernel",
+                "type": "option-of-str",
+                "options": [
+                    "rbf",
+                    "linear",
+                    "poly"
+                ],
+                "default": {
+                    "type": "single",
+                    "value": "rbf"
+                }
+            },
+            {
+                "name": "Regularization",
+                "internal_name": "regularization",
+                "type": "float",
+                "default": {
+                    "type": "single",
+                    "value": 0.05
+                }
+
+            }
+        ],
+        "python_module": {
+            "name": "pls",
+            "function": "perform_pls"
+        }
+    },
+    
+    "Neural Networks": {
+        "availability": {
+            "always": false,
+            "cases": [
+                {
+                    "data": "time"
+                }
+            ]
+        },
+        "single_x": {
+            "always": false,
+            "cases": []
+        },
+        "single_y": {
+            "always": false,
+            "cases": []
+        },
+        "hyperparameters": [
+            {
+                "name": "Neurons per Layer",
+                "internal_name": "neurons",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        2,
+                        5,
+                        10
+                    ]
+                }
+            },
+            {
+                "name": "Layers",
+                "internal_name": "layers",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            },
+            {
+                "name": "Minibatch",
+                "internal_name": "minibatch",
+                "type": "int",
+                "default": {
+                    "type": "list",
+                    "values" : [
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                }
+            },
+            {
+                "name": "Activation Function",
+                "internal_name": "activation",
+                "type": "option-of-str",
+                "options": [
+                    "ReLU",
+                    "Sigmoid"
+                ],
+                "default": {
+                    "type": "single",
+                    "value" : "ReLU"
+                }
+            }
+        ],
+        "python_module": {
+            "name": "pls",
+            "function": "perform_pls"
+        }
+    }
+}

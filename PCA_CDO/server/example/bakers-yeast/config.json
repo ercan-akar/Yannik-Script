@@ -1,0 +1,92 @@
+{
+    "db": {
+        "host": "DBHOSTNAME",
+        "port": "DBHOSTPORT",
+        "password": "DBPASSWORD"
+    },
+    "steps": [
+        {
+            "name": "Vorheizen",
+            "equipments": [
+                {
+                    "name": "Ofen",
+                    "n_time": 83,
+                    "model_data": "example/bakers-yeast/model_data.csv",
+                    "tag": "'G328",
+                    "variables": [
+                        {"name": "Ethanol", "tag": "3220T004"},
+                        {"name": "Temperature", "tag": "3220T005"},
+                        {"name": "Molasses flow", "tag": "3220T006"},
+                        {"name": "NH3 flow", "tag": "3220T007"},
+                        {"name": "Air flow", "tag": "3220T008"},
+                        {"name": "Level", "tag": "3220T009"},
+                        {"name": "pH", "tag": "3220T0010"}
+                    ],
+                    "time_column": "Time",
+                    "id_column": "BatchID"
+                }
+            ]
+        },
+        {
+            "name": "Mischen",
+            "equipments": [
+                {
+                    "name": "Mischer1",
+                    "n_time": 83,
+                    "model_data": "example/bakers-yeast/model_data_missing.csv",
+                    "tag": "'G329",
+                    "variables": [
+                        {"name": "Ethanol", "tag": "3220T004"},
+                        {"name": "Temperature", "tag": "3220T005"},
+                        {"name": "Molasses flow", "tag": "3220T006"},
+                        {"name": "NH3 flow", "tag": "3220T007"},
+                        {"name": "Air flow", "tag": "3220T008"},
+                        {"name": "Level", "tag": "3220T009"},
+                        {"name": "pH", "tag": "3220T0010"}
+                    ],
+                    "time_column": "Time",
+                    "id_column": "BatchID"
+                },
+                {
+                    "name": "Mischer2",
+                    "n_time": 83,
+                    "model_data": "example/bakers-yeast/model_data.csv",
+                    "tag": "'G330",
+                    "variables": [
+                        {"name": "Ethanol", "tag": "3220T004"},
+                        {"name": "Temperature", "tag": "3220T005"},
+                        {"name": "Molasses flow", "tag": "3220T006"},
+                        {"name": "NH3 flow", "tag": "3220T007"},
+                        {"name": "Air flow", "tag": "3220T008"},
+                        {"name": "Level", "tag": "3220T009"},
+                        {"name": "pH", "tag": "3220T0010"}
+                    ],
+                    "time_column": "Time",
+                    "id_column": "BatchID"
+                }
+            ]
+        },
+        {
+            "name": "Absetzen",
+            "equipments": [
+                {
+                    "name": "Wanne",
+                    "n_time": 83,
+                    "model_data": "example/bakers-yeast/model_data.csv",
+                    "tag": "'G331",
+                    "variables": [
+                        {"name": "Ethanol", "tag": "3220T004"},
+                        {"name": "Temperature", "tag": "3220T005"},
+                        {"name": "Molasses flow", "tag": "3220T006"},
+                        {"name": "NH3 flow", "tag": "3220T007"},
+                        {"name": "Air flow", "tag": "3220T008"},
+                        {"name": "Level", "tag": "3220T009"},
+                        {"name": "pH", "tag": "3220T0010"}
+                    ],
+                    "time_column": "Time",
+                    "id_column": "BatchID"
+                }
+            ]
+        }
+    ]
+}
